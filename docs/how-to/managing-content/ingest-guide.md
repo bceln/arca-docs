@@ -38,42 +38,52 @@ In your repository, you might have chosen to simplify the ingest process by supp
 
 Our ingest form is organized into Paragraphs - organized groups of metadata fields. These Paragraphs are collapsed; you will need to click into each of their titles to access the next group of fields.
 
-### Summary
-####	Title 
+### Field groups
 
-* This field is required, and it will act as the label for your object.
-* Additional/Alternative titles: Add these if there are other forms of title you wish to add.
-    * Title Type:
-        * Indicates different kinds of title (alternate, translated, abbreviated, etc.)
-    * Part Name/Number:
-        * Information about the item’s place in a series.
-    * Multiple Titles can be added (“Add Title” button repeats the field set).
+1.  Summary
+    * Title 
+        * This field is required, and it will act as the label for your object.
+        * Additional/Alternative titles: Add these if there are other forms of title you wish to add.
+        * Title Type:
+            * Indicates different kinds of title (alternate, translated, abbreviated, etc.)
+        * Part Name/Number:
+            * Information about the item’s place in a series.
+        * Multiple Titles can be added (“Add Title” button repeats the field set).
 
     !!! warning "Titles and URL Aliases"
         Unless you have an alternate URL alias pattern in place, URL aliases for repository items are set to generate automatically from item titles by default. If you revise an item's title at any point after creation and you don't toggle `Generate automatic URL alias` off under **URL alias** settings on the object, the URL alias will change with the title.
 
-#### Content Type
-
-* The Islandora Model. Determines how Islandora will handle your object, including the viewers it assigns to display your content, derivatives it creates, etc. 
-    3.  Collections(s)
+    * Content Type:
+        * The Islandora Model. Determines how Islandora will handle your object, including the viewers it assigns to display your content, derivatives it creates, etc.
+        * Models with special properties:
+            * Binary: a catchall "none of the above" model. If your file type doesn't fit into any other category and just needs to be stored/made downloadable, choose this.
+            * Collection: if your item's intent is to "collect" and display various other repository items.
+            * Compound Object: Similar to a Collection, this model links disparate Repository Items together. If you are linking together a thesis, a video, and an image together for a student's project, for example, you would first create a Compound Object repository item describing the whole project. Then you would create other repository items for each component (Digital Document, Video, Image) and make them children of the Compound Object.
+            * Digital Document: Basically any PDF. Use it for journal articles, theses, papers; anything that is kept in PDF format. Uses the PDF reader to display.
+            * Newspaper: Acts as a container for Publication Issues. Newspapers provide a date-based display linking to all their child issues.
+            * Paged Content: Mostly used for Books. Acts like a Compound Object or Collection, in that it is a container for individual repository items with the Page content model. Displays with the Mirador viewer.
+            * Publication Issue: Similar to Paged Content, but this is the model you'll use for newspaper issues.
+            * Page: The model you'll use for individual Pages that are collected into either a Publication Issue or a Paged Content item.
+            * Serial and Serial Part: Not recommended or supported at this time.
+    * Collections(s)
         * References existing “container” type items in the repository – collections, newspapers, compound objects, etc.
         * Autocompletes: Begin typing, and results will appear. Select the correct parent from the list.
         * The Collection must exist first before you can enter it here. Create your collections before you create their children.
         * The item may be in more than one container: click the “Add Container” button to repeat. 
-    4.	Resource Type
+    * Resource Type
         * A standardized metadata field describing the type of object with more nuance.
         * The vocabulary for these is the standard [Dublin Core resource types](https://www.dublincore.org/specifications/dublin-core/resource-typelist/).
-    5. Object Type (Citation)
+    * Object Type (Citation)
         * Islandora creates automatic Citations in different styles when viewing the object.
         * Select the appropriate term here to make sure the right kind citation format is generated.
-    6. Genre
+    * Genre
         * The Genre field references two taxonomies: 
             * COAR Resource Types, and 
             * Genre (primarily AAT and MARC terms used by current objects).
         * Autocompletes: Start typing in the Genre field, and a list of options from the referenced vocabularies will appear. Select the term that applies.
             * If the term you need isn’t present, you can type in your new term, and it will be added to the Genre vocabulary for use by future objects. You can also edit the term later to add detail, authorities, spelling corrections, etc.
         * You can add multiple Genres with the “Add another item” button.
-    7. Peer Review Status
+    * Peer Review Status
         * Select this if your item is an academic paper that has been peer reviewed.
 2. Persons and Affiliations
     * All the contributors to your object are added in this section. Separate fields are created for Persons and Organizations.
