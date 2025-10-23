@@ -1131,12 +1131,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../batch-operations/workbench-install/" class="md-nav__link">
+      <a href="../../batch-operations/getting-started/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Installation
+    Getting Started
     
   </span>
   
@@ -1154,12 +1154,12 @@
   
   
     <li class="md-nav__item">
-      <a href="../../batch-operations/getting-started/" class="md-nav__link">
+      <a href="../../batch-operations/workbench-install/" class="md-nav__link">
         
   
   
   <span class="md-ellipsis">
-    Getting Started
+    Installation
     
   </span>
   
@@ -1625,6 +1625,19 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    OAI-PMH harvesting
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1636,6 +1649,34 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#special-considerations-for-eds-ebsco-discovery-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special considerations for EDS (EBSCO Discovery Service)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2089,6 +2130,23 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#special-considerations-for-eds-ebsco-discovery-service" class="md-nav__link">
+    <span class="md-ellipsis">
+      Special considerations for EDS (EBSCO Discovery Service)
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2142,6 +2200,119 @@
 <p>The fullest sets of metadata are either <code>mdRecord</code> or <code>oai_qdc</code>. <code>mdRecord</code> is recommended, as it includes a link to the media, in the field <code>edm:preview</code>. </p>
 <p>A request will look something like this: <code>https://yoursite.arcabc.ca/oai/request?verb=ListSets&amp;metadataPrefix=mdRecord</code></p>
 <p>If you have provided harvesting information to an outside organization for your Islandora 7 site, you will need to give them the new request path and metadata schema.</p>
+<h2 id="special-considerations-for-eds-ebsco-discovery-service">Special considerations for EDS (EBSCO Discovery Service)<a class="headerlink" href="#special-considerations-for-eds-ebsco-discovery-service" title="Permanent link">&para;</a></h2>
+<p>Many Arca partners include their repositories in their EDS implementations. Following are the questions EBSCO will ask about your repository, with some answers to assist you.</p>
+<ol>
+<li>What is the name of this database?<ul>
+<li>Enter your repository's name as configured in your site settings.</li>
+</ul>
+</li>
+<li>What type of database?<ul>
+<li>Select the primary purpose of your repository, either "Institutional Repository" or "Digital Archive".</li>
+</ul>
+</li>
+<li>IR Software/Vendor<ul>
+<li>Islandora</li>
+</ul>
+</li>
+<li>Other<ul>
+<li>4a: mdRecord</li>
+<li>4b: http://dplava.lib.virginia.edu; https://dplava.lib.virginia.edu/dplava.xsd</li>
+</ul>
+</li>
+<li>Does your IR have a Harvest URL?<ul>
+<li>Yes</li>
+<li>5.1) https://[yoursite.arcabc.ca]/oai/request/</li>
+<li>5.2) "Should all data sets be included in the harvest?": [your choice]</li>
+<li>5.3) Weekly, at set day/time [unless you require more frequent harvesting]</li>
+<li>5.4) Annually</li>
+<li>5.5) No</li>
+</ul>
+</li>
+<li>If data is not OAI accessible, can you send records via File Transfer Protocol (FTP)? <ul>
+<li>No</li>
+</ul>
+</li>
+<li>How many records are currently in your database?<ul>
+<li>For a rough count, run an empty search and check the number of records returned.</li>
+</ul>
+</li>
+<li>Which metadata element contains a link back to the metadata record on your site? <ul>
+<li><code>&lt;dcterms:identifier&gt;</code></li>
+<li>8a) EBSCO uses “Online Access” as the default link label. If you want to customize the label for this link, please indicate what it should be: [your choice]</li>
+</ul>
+</li>
+<li>Which metadata element contains a link to the item/document/image?<ul>
+<li><code>&lt;edm:preview&gt;</code></li>
+<li>9a) EBSCO uses “Online Access” as the default link label. If you want to customize the label for this link, please indicate what it should be: [your choice]</li>
+</ul>
+</li>
+<li>If your data contains links for internal use only or links that need to be authenticated, please indicate that here.  EBSCO tests links remotely during the build process. - please let us know if these links do not work remotely<ul>
+<li>Yes, links work remotely [unless you have protected content that needs to be harvested as well]</li>
+</ul>
+</li>
+<li>If direct links are not provided or accessible in data, please provide a base URL to construct the link<ul>
+<li>Not applicable (links are present in metadata)</li>
+</ul>
+</li>
+<li>[leave blank]</li>
+<li>[leave blank]</li>
+<li>If <code>&lt;dc:coverage&gt;</code> is present in your data, should it be searched as a subject (i.e. geographic or chronological)?<ul>
+<li>Other (not applicable)</li>
+</ul>
+</li>
+<li>If <code>&lt;dc:contributor&gt;</code> is present in your data, should it be searched as an Author?<ul>
+<li>Your choice (we have dc:creator and dc:contributor present in this metadata format)</li>
+</ul>
+</li>
+<li>Do you want your records to be flagged as “Full Text”? If yes, IR records will be returned when the Full Text limiter is selected in EDS.<ul>
+<li>Your choice</li>
+</ul>
+</li>
+<li>Do you want your records to be flagged as “Peer Reviewed”? If yes, IR records will be returned when the Peer Reviewed limiter is selected in EDS.<ul>
+<li>Your choice</li>
+</ul>
+</li>
+<li>Do you have DOI numbers in your data? <ul>
+<li>Choose applicable answer</li>
+<li>18a) <code>&lt;edm:isShownAt&gt;</code> or <code>&lt;dcterms:identifier&gt;</code></li>
+</ul>
+</li>
+<li>Do you have ISBNs or ISSNs in your data? <ul>
+<li>Choose applicable answer</li>
+</ul>
+</li>
+<li>If there is OCR text in your data (typically found in dc:description), do you want it to be displayed in the full record?<ul>
+<li>Your choice</li>
+</ul>
+</li>
+<li>Do you want OCR text to be searchable?<ul>
+<li>Your choice</li>
+</ul>
+</li>
+<li>For Dublin Core users only: EBSCO loads every Dublin Core metadata element into EBSCO Discovery Service by default. Please check off, if any, the metadata elements in your data you do NOT want loaded onto EDS:<ul>
+<li>Your choice</li>
+</ul>
+</li>
+<li>In which fields are the following found? [ANSWERS TBD]<ul>
+<li>Edition:</li>
+<li>Volume: </li>
+<li>Issue: </li>
+<li>Pages: </li>
+</ul>
+</li>
+<li>If your data is harvested via OAI, the <setName> in the sets.xml file will be used to construct the Collection Name. If your data does not contain sets, which metadata element contains the Collection Name? If there are no collection names, please indicate that here.<ul>
+<li>Not applicable (data does contain sets)</li>
+<li>24a) Leave blank</li>
+</ul>
+</li>
+<li>The lookup table they ask you to download and fill out has a red column, which is the column you will be editing.<ul>
+<li>In the header row, replace <code>&lt;dc:type&gt;</code> with <code>&lt;edm:hasType&gt;</code></li>
+<li>You will find all of the possible entries for this taxonomy in your Genre term list: <code>/admin/structure/taxonomy/manage/genre/overview</code></li>
+<li>Alternatively, if you want less-nuanced metadata mapping, you can use <code>&lt;dcterms:type&gt;</code>, which has a much shorter list of options (eg "text", "still image") from the Resource Types taxonomy (<code>/admin/structure/taxonomy/manage/resource_types/overview</code>).</li>
+</ul>
+</li>
+</ol>
 
 
 
