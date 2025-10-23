@@ -34,7 +34,7 @@ Many Arca partners include their repositories in their EDS implementations. Foll
 3. IR Software/Vendor
     * Islandora
 4. Other
-    * 4a: mdRecord
+    * 4a: mdRecord/DPLAVA
     * 4b: http://dplava.lib.virginia.edu; https://dplava.lib.virginia.edu/dplava.xsd
 5. Does your IR have a Harvest URL?
     * Yes
