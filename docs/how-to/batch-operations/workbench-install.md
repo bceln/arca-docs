@@ -27,6 +27,7 @@ Life on a Mac is easier if you have Homebrew. Check if you have it installed: `b
     - You will see `(venv)` in your command prompt now, letting you know that you're currently in a Python virtual environment.
     - You will need to do this every time you want to work in Workbench, so that you have access to the various required libraries and plugins.
 7. Install the required Python libraries (see the full list at [https://mjordan.github.io/islandora_workbench_docs/installation/](https://mjordan.github.io/islandora_workbench_docs/installation/))
-    - For each of the libraries, enter `pip install [library-name]`. 
+    - For each of the libraries, enter `pip install [library-name]`.
+        - If you get "command not found" when you enter `pip`, try `pip3` instead (i.e. `pip3 install [library-name]`) 
     - This is case-sensitive, so copy and paste or enter carefully.
 8. Start using Workbench.
