@@ -9,6 +9,7 @@ When viewing a Repository Item, metadata shows up below the object viewer. The m
 To add or remove fields:
 
 1. Manage the Display of the Repository Item content type: `Structure -> Content types -> Repository Item -> Manage Display`
+    - Due to permissions, you may not have access to the Repository Item in the Structure menu. If you have permission to modify display, you should still be able to access it directly via this path: `/admin/structure/types/manage/islandora_object/display/repository_item_bottom_metadata`
 2. Click the `Bottom Metadata` section.
 3. The metadata fields are arranged in collapsible groups. To change the group a field is in, simply drag it out of one group and into the next.
 4. To remove a field from the display, drag it into the Disabled section.
