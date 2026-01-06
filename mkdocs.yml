@@ -88,6 +88,7 @@ nav:
       - Troubleshooting: how-to/batch-operations/troubleshooting.md
     - Search:
       - Advanced search: how-to/search/advanced-search.md
+      - Collection search: how-to/search/collection-search.md
       - Facets: how-to/search/facets.md
     - Access Controls:
       - Embargoes: how-to/access-control/embargo.md
