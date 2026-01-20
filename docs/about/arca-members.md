@@ -8,7 +8,6 @@
 - [CAPER-BC](https://caperbc.arcabc.ca/)
 - [Capilano University](https://capu.arcabc.ca/)
 - [Coast Mountain College](https://coastmountaincollege.arcabc.ca/)
-- [College of the Rockies](https://cotr.arcabc.ca/)
 - [Douglas College](https://dc.arcabc.ca/)
 - [Emily Carr University of Art + Design](https://ecuad.arcabc.ca/)
 - [Justice Institute of British Columbia](https://jibc.arcabc.ca/)
