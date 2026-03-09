@@ -51,7 +51,7 @@ nav:
   - Home: index.md
   - About:
     - About Arca: about/about-arca.md
-    - Arca Members: about/arca-members.md
+    - Arca Participants: about/arca-participants.md
     - Contribute to Arca Docs: about/contributing.md
     - Support: about/support.md    
   - Training: training/training.md
