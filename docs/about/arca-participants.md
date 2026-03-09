@@ -1,4 +1,4 @@
-# Arca Members
+# Arca Participants
 
 - [Athabasca University](https://athabascau.arcabc.ca/)
 - [BC History Digitization Program](https://bchdp.arcabc.ca/)
