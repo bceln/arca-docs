@@ -1,22 +1,13 @@
 # Arca Documentation
-Documentation for Arca Admins will live here. 
 
 This is *not* exhaustive documentation for all things Islandora. For general Islandora documentation, please see the [official Islandora documentation site](https://islandora.github.io/documentation/).
 
-This site covers things specific to working in the Arca service. We will be covering the following:
+This site covers things specific to working in the Arca service. See the table of contents for the extensive list of topics.
 
-* What is Arca
-    * How Arca works
-    * How Arca membership works
-    * Arca's infrastructure
-* Metadata
-    * Arca's metadata schema
-    * Customizing metadata display
-    * Hiding metadata fields from your ingest form
-* Collection building and management
-    * Specific ingest processes for Arca
-* Customizing look and feel
-    * Customizing your theme
-    * Placing blocks 
+!!! warning "For any configuration changes that you are not certain will work as expected, please test them in the [Arca Sandbox](https://sandbox.arcabc.ca) first."
 
-More stuff TBA...
+The [Arca Sandbox](https://sandbox.arcabc.ca) is a training area, as well as a way to try out configuration changes, complicated ingests, or any other experimentation without affecting your production site.
+
+If you do not have an Arca Sandbox account, you can [register for one](https://sandbox.arcabc.ca/user/register). The Arca Office will receive notice of your registration and approve your account shortly.
+
+For technical support, advice, or any other kind of help with your repository, please contact the Arca Office via our [support page](https://support.bceln.ca) or by email (arca-help [at] bceln.ca).
