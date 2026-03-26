@@ -11,3 +11,5 @@ The [Arca Sandbox](https://sandbox.arcabc.ca) is a training area, as well as a w
 If you do not have an Arca Sandbox account, you can [register for one](https://sandbox.arcabc.ca/user/register). The Arca Office will receive notice of your registration and approve your account shortly.
 
 For technical support, advice, or any other kind of help with your repository, please contact the Arca Office via our [support page](https://support.bceln.ca) or by email (arca-help [at] bceln.ca).
+
+If you attempt a configuration change described here and are denied permission, contact the Arca Office for assistance.
