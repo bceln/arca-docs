@@ -11,7 +11,7 @@ Please follow this process when new staff join your repository team.
     - Give them an appropriate Drupal role for their work
 3. The Arca Office will provide them with an account in the [Arca Sandbox](https://sandbox.arcabc.ca)
 4. Send the new user to the [Training page](/arca-docs/training/training), and have them review:
-    - [Orientation](arca-docs/training/training/#orientation): provides an overview of Arca's history and context; explains and demonstrates how the service works; and outlines your roles and responsibilities as members, and Arca's responsibilities to you; and
+    - [Orientation](/arca-docs/training/training/#orientation): provides an overview of Arca's history and context; explains and demonstrates how the service works; and outlines your roles and responsibilities as members, and Arca's responsibilities to you; and
     - [Basic Training](/arca-docs/training/training/#recordings): Modularized videos covering all key repository skills and tasks.
         - While logged into the Sandbox, user should follow the instructions in the video and replicate the tasks being demonstrated.
         - Training tasks should *only be done in the Sandbox*, not in the production repository. 
