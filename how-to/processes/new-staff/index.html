@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://bceln.github.io/arca-docs/how-to/processes/self-submission/">
+        <link rel="canonical" href="https://bceln.github.io/arca-docs/how-to/processes/new-staff/">
       
       
-        <link rel="prev" href="../new-staff/">
+        <link rel="prev" href="../../access-control/embargo/">
       
       
-        <link rel="next" href="../../statistics/statistics/">
+        <link rel="next" href="../self-submission/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Self-submission - Arca Documentation</title>
+        <title>New staff - Arca Documentation</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#creating-a-moderated-self-submission-process" class="md-skip">
+        <a href="#new-staff-onboarding" class="md-skip">
           Skip to content
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Self-submission
+              New staff
             
           </span>
         </div>
@@ -1769,34 +1769,6 @@
                 
   
   
-  
-  
-    <li class="md-nav__item">
-      <a href="../new-staff/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    New staff
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
     
   
   
@@ -1816,7 +1788,7 @@
   <span class="md-ellipsis">
     
   
-    Self-submission
+    New staff
   
 
     
@@ -1826,6 +1798,34 @@
 
       </a>
       
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../self-submission/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Self-submission
+  
+
+    
+  </span>
+  
+  
+
+      </a>
     </li>
   
 
@@ -2546,7 +2546,7 @@
 
 
   
-    <a href="https://github.com/bceln/arca-docs/edit/main/docs/how-to/processes/self-submission.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.com/bceln/arca-docs/edit/main/docs/how-to/processes/new-staff.md" title="Edit this page" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75z"/></svg>
     </a>
@@ -2555,218 +2555,38 @@
     
       
     
-    <a href="https://github.com/bceln/arca-docs/raw/main/docs/how-to/processes/self-submission.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/bceln/arca-docs/raw/main/docs/how-to/processes/new-staff.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
     </a>
   
 
 
-<h1 id="creating-a-moderated-self-submission-process">Creating a Moderated Self-Submission Process<a class="headerlink" href="#creating-a-moderated-self-submission-process" title="Permanent link">&para;</a></h1>
-<p>This guide describes how to set up Islandora to accept content submissions from users and hold them in a moderation queue for editing and approval.</p>
-<p>There are two possible approaches:</p>
+<h1 id="new-staff-onboarding">New Staff Onboarding<a class="headerlink" href="#new-staff-onboarding" title="Permanent link">&para;</a></h1>
+<p>Please follow this process when new staff join your repository team.</p>
 <ol>
-<li>Using the Content Moderation workflows, submitters will create Repository Item nodes themselves, which get put into Draft state. Repository staff then review, edit, and Publish those drafts. Or,</li>
-<li>Using the Webform module, submitters send in their thesis and some basic metadata. Repository staff will use the form to create the Repository Item on the submitter's behalf.</li>
-</ol>
-<h1 id="content-moderation-method">Content Moderation method<a class="headerlink" href="#content-moderation-method" title="Permanent link">&para;</a></h1>
-<h2 id="modules">Modules<a class="headerlink" href="#modules" title="Permanent link">&para;</a></h2>
-<p>Enable the following modules:</p>
-<ul>
-<li>Workflow</li>
-<li>Content Moderation</li>
-<li>Content Moderation Notifications</li>
-<li>Content Moderation Bypass</li>
-<li>Content Moderation Dashhboard</li>
-</ul>
-<h2 id="module-configurations">Module Configurations<a class="headerlink" href="#module-configurations" title="Permanent link">&para;</a></h2>
-<p>Each of the above modules must be configured to create the self-submission process.</p>
-<h3 id="workflow-configuration">Workflow configuration<a class="headerlink" href="#workflow-configuration" title="Permanent link">&para;</a></h3>
-<ol>
-<li>Configure Workflow at <code>/admin/config/workflow/workflows</code></li>
-<li>Use the <code>+Add workflow</code> button to create a new workflow</li>
-<li>Label it something understandable like "Start as draft", and choose the workflow type <code>Content moderation</code></li>
-<li>Configure States:<ul>
-<li>These are the different states a submission can be in, the ultimate state being Published.</li>
-<li>The default states, Draft and Published, should suffice, but you can add more intermediate states like "Under review".</li>
-<li>If adding a new state, set it to "Default revision", and make sure they are in order.</li>
+<li>Notify the Arca Office, and let us know:<ul>
+<li>The new user's contact information, including name, email, and title</li>
+<li>What the new person's role is (are they ingesting/editing content; working on site configurations; managing the repository, etc.)</li>
+<li>What communications they'll need to receive (e.g. the Arca Admins mailing list; ConsortiaManager billing contact)</li>
 </ul>
 </li>
-<li>Configure Transitions:<ul>
-<li>Transitions describe how content moves from one state to another. Transitions are executed by authorized users.</li>
-<li>The default states should suffice if only using the Draft and Published states, but you should create more transitions if you've added more states.</li>
-<li>"From" describes the initial state of the object before the transition is applied; "To" describes the state the object will be in after the transition.</li>
+<li>Create an account for them in your repository with the appropriate role:<ul>
+<li>Go to <code>/admin/people</code> and add the new user</li>
+<li>Give them an appropriate Drupal role for their work</li>
 </ul>
 </li>
-<li>This workflow applies to:<ul>
-<li>Under Content Types, select <code>Repository Item</code>.</li>
-<li>If you want to also subject Media submissions to review, select all applicable Media Types as well.</li>
-</ul>
-</li>
-<li>Set Default Moderation State:<ul>
-<li>When a Repository Item is submitted, it will automatically get the state you select here. Leave it at "Draft".</li>
-</ul>
-</li>
-</ol>
-<h3 id="content-moderation-notifications-configuration">Content Moderation Notifications configuration<a class="headerlink" href="#content-moderation-notifications-configuration" title="Permanent link">&para;</a></h3>
-<p>You can set up Notifications to send an email to the appropriate people when a submission undergoes a transition. For example, you might notify Reviewers when a new draft is submitted. Or you might notify the submitter when their submission is published, or if revisions are requested.</p>
-<ol>
-<li>Configure Content Moderation Notifications at <code>/admin/config/workflow/notifications/</code></li>
-<li>Create notifications for the kids of activities that you want people notified about. For example, a notification called "Notify Reviewer":<ul>
-<li>Label: Notify Reviewer</li>
-<li>Workflow: Start As Draft (or whatever your workflow is named)</li>
-<li>Transitions: Create New draft<ul>
-<li>Notifies the recipient when a new draft is created -- i.e. when a new submission is made</li>
-</ul>
-</li>
-<li>Roles:<ul>
-<li>If you check off a role, it means that <em>all users with this role</em> will be notified. If you want all potential reviewers to see this submission, then you should have a Reviewer role, and select it.</li>
-</ul>
-</li>
-<li>Email the author?:<ul>
-<li>Appropriate for transitions like "Revisions requested" or "Published", to notify the author that they have work to do or that their submission was accepted.</li>
-</ul>
-</li>
-<li>Disable the site email address:<ul>
-<li>By default, the module will send a message to the website owner's email address. Best to disable this.</li>
-</ul>
-</li>
-<li>Adhoc email addresses: <ul>
-<li>If you have specific users you want to receive the message, add them here.</li>
-</ul>
-</li>
-<li>Email subject and Body:<ul>
-<li>Write your email here. </li>
-<li>You can also use tokens (see the Browse Available Tokens link) to insert variables like the author name (<code>[node:author]</code>), the submission title (<code>[node:title]</code>), etc.</li>
+<li>The Arca Office will provide them with an account in the <a href="https://sandbox.arcabc.ca">Arca Sandbox</a></li>
+<li>Send the new user to the <a href="/arca-docs/training/training">Training page</a>, and have them review:<ul>
+<li><a href="arca-docs/training/training/#orientation">Orientation</a>: provides an overview of Arca's history and context; explains and demonstrates how the service works; and outlines your roles and responsibilities as members, and Arca's responsibilities to you; and</li>
+<li><a href="/arca-docs/training/training/#recordings">Basic Training</a>: Modularized videos covering all key repository skills and tasks.<ul>
+<li>While logged into the Sandbox, user should follow the instructions in the video and replicate the tasks being demonstrated.</li>
+<li>Training tasks should <em>only be done in the Sandbox</em>, not in the production repository. </li>
 </ul>
 </li>
 </ul>
 </li>
-</ol>
-<h3 id="content-moderation-dashboard">Content Moderation Dashboard<a class="headerlink" href="#content-moderation-dashboard" title="Permanent link">&para;</a></h3>
-<p><em>Optional</em>, and doesn't quite work easily out of the box. Provides a dashboard for each user displaying their submissions. This module is very barebones and requires you to create your own views, but has a lot of potential.</p>
-<ol>
-<li>Configure it at <code>/admin/config/people/moderation_dashboard</code></li>
-<li>Redirect on login: If selected, all users will be directed to their <code>moderation-dashboard</code> page when they log in, at <code>/user/[user ID number]/moderation-dashboard</code>.</li>
-<li>Pull chart.js from CDN:<ul>
-<li>Turn this on at least initially, so that you can download the chart.js file. Otherwise, viewing the dashboard will just result in an error.</li>
-</ul>
-</li>
-</ol>
-<p>You will need to then configure the views that appear on the moderation dashboard. This has not yet been explored.</p>
-<h2 id="roles-and-permissions">Roles and Permissions<a class="headerlink" href="#roles-and-permissions" title="Permanent link">&para;</a></h2>
-<p>Permissions must be well-configured in order for self-submission workflows to go smoothly.</p>
-<h3 id="roles">Roles<a class="headerlink" href="#roles" title="Permanent link">&para;</a></h3>
-<p>Create the roles (<code>admin/people/roles</code>) that are appropriate to your workflow:</p>
-<ul>
-<li>A <code>Submitter</code> role for ingesters who require moderation</li>
-<li>Optional: A <code>Reviewer</code> role for users who should be notified about new submissions so they can review them</li>
-</ul>
-<h3 id="permissions">Permissions<a class="headerlink" href="#permissions" title="Permanent link">&para;</a></h3>
-<p>Set permissions for all submission activities (<code>admin/people/permissions</code>): </p>
-<h4 id="roles-permissions-on-transitions">Roles permissions on transitions<a class="headerlink" href="#roles-permissions-on-transitions" title="Permanent link">&para;</a></h4>
-<p>Under Content Moderation, set the following permissions:</p>
-<ul>
-<li>“Use the Create New Draft transition":</li>
-<li>All roles that can create Repository Items, including Submitter</li>
-<li>“Use Publish transition”: <ul>
-<li>All roles that are allowed to move things from Draft to Published.</li>
-<li>These should be reviewers, repository administrators, etc.</li>
-</ul>
-</li>
-</ul>
-<h4 id="bypassing-the-draft-state">Bypassing the Draft state<a class="headerlink" href="#bypassing-the-draft-state" title="Permanent link">&para;</a></h4>
-<p>You probably want certain roles to be able to submit directly to the repository without being moderated (e.g. Administrator, Site Administrator, Repository Administrator, Ingester). Content Moderation Bypass allows this.</p>
-<p>Under Content Moderation Bypass, select appropriate roles for the permission “Bypass transition restrictions”.</p>
-<h4 id="view-own-unpublished-content">View own unpublished content<a class="headerlink" href="#view-own-unpublished-content" title="Permanent link">&para;</a></h4>
-<p>Roles subject to workflow should be able to view their own unpublished content.</p>
-<ul>
-<li>Media: View own unpublished media (select applicable roles) </li>
-<li>Node: View own unpublished content (select applicable roles) </li>
-</ul>
-<h4 id="allow-submitters-to-create-content">Allow Submitters to create content<a class="headerlink" href="#allow-submitters-to-create-content" title="Permanent link">&para;</a></h4>
-<p>Any new roles need to have basic permissions configured, including the ability to add new items to the repository.</p>
-<ul>
-<li>Under Node:  <ul>
-<li>Repository Item: Create new content </li>
-<li>Repository Item: Edit own content (if you want to allow this) </li>
-</ul>
-</li>
-<li>Under Media: <ul>
-<li>For each media type you want submitters to be able to ingest, check off the "Create new media" permission </li>
-</ul>
-</li>
-<li>Create Media (general media creation permission)</li>
-</ul>
-<h2 id="content-moderation-process">Content Moderation Process<a class="headerlink" href="#content-moderation-process" title="Permanent link">&para;</a></h2>
-<p>With the modules configured, this section describes how to work within a content moderation structure.</p>
-<h3 id="ingesting-content">Ingesting content<a class="headerlink" href="#ingesting-content" title="Permanent link">&para;</a></h3>
-<h4 id="submitters">Submitters<a class="headerlink" href="#submitters" title="Permanent link">&para;</a></h4>
-<p>Users with the Submitter role have permission to ingest Repository Item content and submit it to the Draft state. When they create content, it is not published until someone with approval permissions publishes it.</p>
-<h4 id="repository-staff">Repository staff<a class="headerlink" href="#repository-staff" title="Permanent link">&para;</a></h4>
-<p>Roles assigned permission to bypass the moderation states may ingest content without restrictions. </p>
-<p>However: the default moderation state when creating content, even for those with the Bypass permission, is "Draft". If using these workflows, submitters wanting to publish directly must change this to "published" whenever they ingest content.</p>
-<p><img alt="image" src="/arca-docs/assets/draft-published.png" /></p>
-<p>If the item was ingested to the "draft" state accidentally, it may be moved directly to "published" using the moderation block.</p>
-<p><img alt="image" src="/arca-docs/assets/moderation_state.png" /></p>
-<h1 id="webform-method">Webform method<a class="headerlink" href="#webform-method" title="Permanent link">&para;</a></h1>
-<h2 id="modules_1">Modules<a class="headerlink" href="#modules_1" title="Permanent link">&para;</a></h2>
-<ul>
-<li>Webform<ul>
-<li>Base Webform module</li>
-</ul>
-</li>
-<li>Webform Attachment<ul>
-<li>Allows submitters to attach files, eg PDFs</li>
-</ul>
-</li>
-<li>Webform Node<ul>
-<li>Optional; allows a Webform to be created as a page with your form embedded in it.</li>
-</ul>
-</li>
-<li>Webform Submission Import/Export<ul>
-<li>Optional; allows you to export (and import) submissions for your records.</li>
-</ul>
-</li>
-<li>Webform UI<ul>
-<li>Provides a user interface for you to manage webforms.</li>
-</ul>
-</li>
-</ul>
-<h2 id="creating-a-webform">Creating a webform<a class="headerlink" href="#creating-a-webform" title="Permanent link">&para;</a></h2>
-<ol>
-<li>Go to <code>Structure -&gt; Webforms</code>, and click "Add a webform"</li>
-<li>Give it a title (e.g. "Thesis submission") and descriptions, and a status (open or closed). Save.<ul>
-<li>"Open" means it will accept submissions; "closed" means it will not.</li>
-</ul>
-</li>
-<li>Add elements (fields) to your form:<ul>
-<li>In the Webforms section, next to your form, click Build</li>
-<li>To add a new element, click Add Element and select the type.<ul>
-<li>Choose the type of field relevant to its purpose; eg. for user email, use the Email field.</li>
-<li>Give your element a title and description, and save</li>
-</ul>
-</li>
-<li>Be sure to include at minimum elements for:<ul>
-<li>Title</li>
-<li>Author</li>
-<li>Date</li>
-<li>Abstract</li>
-<li>Submission file (attachment)</li>
-<li>Submitter contact information</li>
-</ul>
-</li>
-<li>Also include any other fields that the repository staff will need to fully populate the metadata.</li>
-</ul>
-</li>
-<li>Add emails and handlers to send notifications:<ul>
-<li>Click the <code>Emails/Handlers</code> tab</li>
-<li>Add Email</li>
-<li>Fill out the details -- the recipient email address, subject, etc.</li>
-<li>Save</li>
-</ul>
-</li>
-<li>Create either a page with a link to your form, or create a menu link to your form.        </li>
+<li>If the new user has further questions about the training or their tasks, they should contact the Arca Office; we will be happy to answer questions or meet with them if needed.</li>
 </ol>
 
 
