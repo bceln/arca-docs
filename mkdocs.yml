@@ -93,6 +93,7 @@ nav:
     - Access Controls:
       - Embargoes: how-to/access-control/embargo.md
     - Processes:
+      - New staff: how-to/processes/new-staff.md
       - Self-submission: how-to/processes/self-submission.md
     - Usage Statistics:
       - Collecting statistics: how-to/statistics/statistics.md
