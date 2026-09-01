@@ -1,4 +1,4 @@
-# Islandora 2 Ingest Guide
+# Arca Ingest Guide
 
 In the old Islandora platform, to ingest content, you had to navigate to your collection, manage the collection, add a new object to the collection, select a content model, and fill out a form tailored to that specific kind of content.
 
@@ -6,15 +6,16 @@ In the new platform, it’s much more streamlined, and integrated with the way o
 
 This guide describes how each field in the ingest form works, and what to do with them.
 
-**Note**: While all Arca members will have each of these fields present in their Repository Item content type, we can suppress the visibility of fields that your institution does not use. This suppression is at the repository level, not for individual types of content. Contact the Arca Admin Centre for support.
+!!! note
+     While all Arca members will have each of these fields present in their Repository Item content type, we can suppress the visibility of fields that your institution does not use. This suppression is at the repository level, not for individual types of content. Contact the Arca Admin Centre for support.
 
-For a walkthrough of the ingest process, see the [recording from Basic Training](/arca-docs/training/training/#recordings).
+For a visual walkthrough of the ingest process, see the [recording from Basic Training](/arca-docs/training/training/#recordings).
 
 (For posterity and in case you need it, an [older walkthrough exists](https://youtu.be/SSjbLJXc0u8), but does not cover the most up-to-date version of the content type.)
 
 ## Getting started
 
-Log in to your repository. Once logged in, youl have access to the administrative toolbar, where you can manage the repository and its content.
+Log in to your repository. Once logged in, you'll have access to the administrative toolbar, where you can manage the repository and its content.
 
 ## Creating Collections
 
@@ -33,16 +34,15 @@ In modern Islandora, all objects are created using the same metadata form. The f
 
 In your repository, you might have chosen to simplify the ingest process by suppressing the visibility of some of these fields. They still exist in your Repository Item content type, but they are not visible to you when you fill out the form. 
 
-!!! bug "New taxonomy terms and parentheses"
-    When creating a new taxonomy term from the node metadata form, please note that the inclusion of parentheses in the term may result in an SQL error. This is the case for any term/entity reference fields, including Genre, Subject, and Name. See [Troubleshooting](/arca-docs/troubleshooting/troubleshooting/#taxonomies-and-term-references) for more detail and solutions.
+Our ingest form is organized into groups of metadata fields. These groups are collapsed; you will need to click into each of their titles to access the next group of fields.
 
-Our ingest form is organized into Paragraphs - organized groups of metadata fields. These Paragraphs are collapsed; you will need to click into each of their titles to access the next group of fields.
+![Screenshot of the metadata form with the group titles circled](../../assets/metadata-form-groups.png)
 
 ### Field groups
 
 1.  Summary
     * Title 
-        * This field is required, and it will act as the label for your object.
+        * This field is **required**, and it will act as the label for your object.
         * Additional/Alternative titles: Add these if there are other forms of title you wish to add.
         * Title Type:
             * Indicates different kinds of title (alternate, translated, abbreviated, etc.)
@@ -56,15 +56,15 @@ Our ingest form is organized into Paragraphs - organized groups of metadata fiel
     * Content Type:
         * The Islandora Model. Determines how Islandora will handle your object, including the viewers it assigns to display your content, derivatives it creates, etc.
         * Models with special properties:
-            * Binary: a catchall "none of the above" model. If your file type doesn't fit into any other category and just needs to be stored/made downloadable, choose this.
-            * Collection: if your item's intent is to "collect" and display various other repository items.
-            * Compound Object: Similar to a Collection, this model links disparate Repository Items together. If you are linking together a thesis, a video, and an image together for a student's project, for example, you would first create a Compound Object repository item describing the whole project. Then you would create other repository items for each component (Digital Document, Video, Image) and make them children of the Compound Object.
-            * Digital Document: Basically any PDF. Use it for journal articles, theses, papers; anything that is kept in PDF format. Uses the PDF reader to display.
-            * Newspaper: Acts as a container for Publication Issues. Newspapers provide a date-based display linking to all their child issues.
-            * Paged Content: Mostly used for Books. Acts like a Compound Object or Collection, in that it is a container for individual repository items with the Page content model. Displays with the Mirador viewer.
-            * Publication Issue: Similar to Paged Content, but this is the model you'll use for newspaper issues.
-            * Page: The model you'll use for individual Pages that are collected into either a Publication Issue or a Paged Content item.
-            * Serial and Serial Part: Not recommended or supported at this time.
+            * **Binary**: a catchall "none of the above" model. If your file type doesn't fit into any other category and just needs to be stored/made downloadable, choose this.
+            * **Collection**: if your item's intent is to "collect" and display various other repository items.
+            * **Compound Object**: Similar to a Collection, this model links disparate Repository Items together. If you are linking together a thesis, a video, and an image together for a student's project, for example, you would first create a Compound Object repository item describing the whole project. Then you would create other repository items for each component (Digital Document, Video, Image) and make them children of the Compound Object.
+            * **Digital Document**: Basically any PDF. Use it for journal articles, theses, papers; anything that is kept in PDF format. Uses the PDF reader to display.
+            * **Newspaper**: Acts as a container for Publication Issues. Newspapers provide a date-based display linking to all their child issues.
+            * **Paged Content**: Mostly used for Books. Acts like a Compound Object or Collection, in that it is a container for individual repository items with the Page content model. Displays with the Mirador viewer.
+            * **Publication Issue**: Similar to Paged Content, but this is the model you'll use for newspaper issues.
+            * **Page**: The model you'll use for individual Pages that are collected into either a Publication Issue or a Paged Content item.
+            * **Serial and Serial Part**: Not recommended or supported at this time.
     * Collections(s)
         * References existing “container” type items in the repository – collections, newspapers, compound objects, etc.
         * Autocompletes: Begin typing, and results will appear. Select the correct parent from the list.
