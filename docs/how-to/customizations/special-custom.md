@@ -32,3 +32,19 @@ Process:
     - Edit the collection and click the Media tab
     - Add new Media, of type Image
     - Upload the image of your choice. For the Media Use field, select `Thumbnail`.
+
+## Optimize thumbnail sizing to fill the card in Collection display and Search results
+
+- Site: JIBC
+- Use case: Aesthetics
+- Modules: None
+
+Search results and collection display use responsive images to generate their thumbnails, so there is no perfect thumbnail size that will fill out the boxes and eliminate the grey borders. 
+
+You can get close by sizing your thumbnails to the ratio 216x124, or 1.74.
+ 
+For example, with a height of 298 pixels, that would scale to a width of about 519 pixels.
+
+To implement, create your custom thumbnail in Photoshop or other image editing software.
+
+Navigate to your Repository Item, click the Media tab, and edit the Thumbnail image. Replace the file with your custom file.
