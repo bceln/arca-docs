@@ -39,3 +39,17 @@ Yes. If you notice that an object is not appearing in search results but you kno
 ## Statistics
 ### How can I track usage data for my site?
 Please see our page on [Usage Statistics](/arca-docs/how-to/statistics/statistics/).
+
+## Derivatives
+### How do I generate missing derivatives?
+
+1. Edit the parent item (Collection, Newspaper, Compound Object, etc.) and click the Member Operations tab.
+2. Check the boxes for each item that needs a derivative.
+3. Under Actions at the bottom of the table, select the type of derivative you want to generate, and click "Apply to the selected items".
+4. On the next page, fill in the following fields:
+  - Source Term: the media that will produce the derivatives you need. Probably "Original File". Start typing "original" and it will show up.
+  - Derivative Term: the type of derivative you want to produce:
+      - Service File: These are the files that are displayed when you view the node. For images, it's what appears in the image viewer. For videos, it's the playable video.
+      - Thumbnail Image: The image that appears in search results and collection browse.
+5. Leave all other fields as-is, and click Apply.
+      
