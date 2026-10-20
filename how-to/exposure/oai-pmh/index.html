@@ -1918,6 +1918,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#theses-canada-harvesting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theses Canada Harvesting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#special-considerations-for-eds-ebsco-discovery-service" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2081,6 +2092,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#theses-canada-harvesting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Theses Canada Harvesting
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#special-considerations-for-eds-ebsco-discovery-service" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2137,6 +2159,7 @@
 <li>mdRecord: DPLAVA</li>
 <li>oai_qdc: DGI Standard Qualified Dublin Core</li>
 <li>oai_raw: None</li>
+<li>oai_lac: LAC (Metatag)</li>
 <li>oai_dc: OAI Dublin Core (RDF Mapping)</li>
 <li>mods: None</li>
 </ul>
@@ -2147,6 +2170,9 @@
 <p>The fullest sets of metadata are either <code>mdRecord</code> or <code>oai_qdc</code>. <code>mdRecord</code> is recommended, as it includes a link to the media, in the field <code>edm:preview</code>. </p>
 <p>A request will look something like this: <code>https://yoursite.arcabc.ca/oai/request?verb=ListSets&amp;metadataPrefix=mdRecord</code></p>
 <p>If you have provided harvesting information to an outside organization for your Islandora 7 site, you will need to give them the new request path and metadata schema.</p>
+<h2 id="theses-canada-harvesting">Theses Canada Harvesting<a class="headerlink" href="#theses-canada-harvesting" title="Permanent link">&para;</a></h2>
+<p>If you want to Library and Archives Canada to harvest your theses for Theses Canada, you'll need to make sure that the <code>oai_lac</code> field is set in your OAI-PMH configuration (<code>admin/config/services/rest/oai-pmh</code>).</p>
+<p>LAC is looking for certain fields in their OAI-PMH response, which are configured for you in the Metatag module (<code>admin/config/search/metatag/node</code>). "The Library and Archives Canada (LAC) section" should already be populated, but you may make tweaks to it if needed.</p>
 <h2 id="special-considerations-for-eds-ebsco-discovery-service">Special considerations for EDS (EBSCO Discovery Service)<a class="headerlink" href="#special-considerations-for-eds-ebsco-discovery-service" title="Permanent link">&para;</a></h2>
 <p>Many Arca partners include their repositories in their EDS implementations. Following are the questions EBSCO will ask about your repository, with some answers to assist you.</p>
 <ol>
