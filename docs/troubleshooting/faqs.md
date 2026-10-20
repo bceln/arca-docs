@@ -51,5 +51,9 @@ Please see our page on [Usage Statistics](/arca-docs/how-to/statistics/statistic
   - Derivative Term: the type of derivative you want to produce:
       - Service File: These are the files that are displayed when you view the node. For images, it's what appears in the image viewer. For videos, it's the playable video.
       - Thumbnail Image: The image that appears in search results and collection browse.
+  - MIME Type:
+      - For Image service files, use `image/jp2`
+      - For Thumbnails, leave it as-is (`image/jpeg`)
+      - Generally this will be the default for the media type, but check other examples from your repository to confirm the correct MIMEtype for your item.
 5. Leave all other fields as-is, and click Apply.
       
