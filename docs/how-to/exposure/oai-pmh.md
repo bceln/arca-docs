@@ -12,6 +12,7 @@ Some basic settings:
     - mdRecord: DPLAVA
     - oai_qdc: DGI Standard Qualified Dublin Core
     - oai_raw: None
+    - oai_lac: LAC (Metatag)
     - oai_dc: OAI Dublin Core (RDF Mapping)
     - mods: None
 - Set your repository name and admin email
@@ -22,6 +23,12 @@ The fullest sets of metadata are either `mdRecord` or `oai_qdc`. `mdRecord` is r
 A request will look something like this: `https://yoursite.arcabc.ca/oai/request?verb=ListSets&metadataPrefix=mdRecord`
 
 If you have provided harvesting information to an outside organization for your Islandora 7 site, you will need to give them the new request path and metadata schema.
+
+## Theses Canada Harvesting
+
+If you want to Library and Archives Canada to harvest your theses for Theses Canada, you'll need to make sure that the `oai_lac` field is set in your OAI-PMH configuration (`admin/config/services/rest/oai-pmh`).
+
+LAC is looking for certain fields in their OAI-PMH response, which are configured for you in the Metatag module (`admin/config/search/metatag/node`). "The Library and Archives Canada (LAC) section" should already be populated, but you may make tweaks to it if needed.
 
 ## Special considerations for EDS (EBSCO Discovery Service)
 
