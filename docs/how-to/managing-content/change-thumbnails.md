@@ -30,7 +30,7 @@ While Collections use the Representative Image, thumbnails for normal repository
      ![<# The "add new file" interface for the Image field #>](/arca-docs/assets/thumbnail-image-upload.png "Screenshot")     
   - Save
   
- ## Sharing/re-using thumbnails
+## Sharing/re-using thumbnails
  
 Some kinds of content models, such as Binary objects, do not produce thumbnails based on their content. You may wish to create a custom thumbnail and apply it to multiple items in your repository.
 
