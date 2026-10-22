@@ -2099,6 +2099,21 @@
      <img alt="&lt;# The &quot;add new file&quot; interface for the Image field #&gt;" src="/arca-docs/assets/thumbnail-image-upload.png" title="Screenshot" />     </li>
 <li>Save</li>
 </ul>
+<p>## Sharing/re-using thumbnails</p>
+<p>Some kinds of content models, such as Binary objects, do not produce thumbnails based on their content. You may wish to create a custom thumbnail and apply it to multiple items in your repository.</p>
+<p>There is no media reuse option in the individual Repository Item's Media tab, but it can be reused for multiple items following this process:</p>
+<ol>
+<li>Go to the Media Library at <code>/admin/content/media-grid</code>.</li>
+<li>Select the image you want to use for your thumbnail, and click Edit. Make sure this item has "Thumbnail" as its Media Use.</li>
+<li>Under the Media Of field, you will see the item's existing media. Click into that field:<ul>
+<li>Add a comma to the end of the items in the field, to add a new entry.</li>
+<li>Start typing the node ID or name of the Repository Item you want this item to apply to, and select it when it comes up.</li>
+<li>If you want to add this thumbnail to more than one new Repository Item, add another comma, and repeat till you have the complete list.</li>
+</ul>
+</li>
+<li>Save.</li>
+</ol>
+<p>Navigate to your Repository Item, and check the Media tab. You should now see a new thumbnail in its Media list.</p>
 
 
 
